@@ -1,0 +1,7 @@
+name = "devhub-keep-alive"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Ping every 10 minutes so the Render free instance doesn't spin down (it sleeps after ~15 min idle)
+[triggers]
+crons = ["*/10 * * * *"]
